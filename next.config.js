@@ -12,10 +12,7 @@ const nextConfig = {
         headers: [
           {
             key: "Access-Control-Allow-Origin",
-            value:
-              process.env.NODE_ENV === "production"
-                ? process.env.NEXT_PUBLIC_BASIC_URL_PRODUCTION
-                : process.env.NEXT_PUBLIC_BASIC_URL,
+            value: process.env.NEXT_PUBLIC_BASIC_URL_PRODUCTION,
           },
         ],
       },
