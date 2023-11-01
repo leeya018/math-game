@@ -12,7 +12,7 @@ const nextConfig = {
         headers: [
           {
             key: "Access-Control-Allow-Origin",
-            value: process.env.NEXT_PUBLIC_BASIC_URL_PRODUCTION,
+            value: "https://math-game-lee.netlify.app",
           },
         ],
       },
