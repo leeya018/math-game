@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 function AnimatedImage() {
@@ -16,14 +17,14 @@ function AnimatedImage() {
   }, []);
 
   return (
-    // <div className="flex justify-center items-center h-screen relative">
-    <img
+    <Image
       src="/trophy.png" // replace with your image path
       alt="Animated"
       className="absolute"
       style={style}
+      width={400}
+      height={400}
     />
-    // </div>
   );
 }
 
