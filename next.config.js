@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: false,
   images: {
-    domains: ["math-game-lee.netlify.app"],
+    domains: ["lh3.googleusercontent.com", "math-game-lee.netlify.app"],
   },
   async headers() {
     return [
@@ -12,7 +12,10 @@ const nextConfig = {
         headers: [
           {
             key: "Access-Control-Allow-Origin",
-            value: `http://localhost:${process.env.NEXT_PUBLIC_PORT}/`,
+            value:
+              process.env.NODE_ENV === "production"
+                ? process.env.NEXT_PUBLIC_BASIC_URL_PRODUCTION
+                : process.env.NEXT_PUBLIC_BASIC_URL,
           },
         ],
       },
